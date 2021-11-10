@@ -6,7 +6,7 @@
 /*   By: abigeddi <abigeddi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 19:54:57 by abigeddi          #+#    #+#             */
-/*   Updated: 2021/11/04 17:01:35 by abigeddi         ###   ########.fr       */
+/*   Updated: 2021/11/10 15:02:53 by abigeddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	if (!src)
-		return (0);
 	if (src < dst)
 	{
 		while (len--)

@@ -6,7 +6,7 @@
 /*   By: abigeddi <abigeddi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 12:40:40 by abigeddi          #+#    #+#             */
-/*   Updated: 2021/11/07 13:25:42 by abigeddi         ###   ########.fr       */
+/*   Updated: 2021/11/10 17:19:14 by abigeddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ char	*ft_strmapi(char const *s, char (*f) (unsigned int, char))
 	int		len;
 
 	i = 0;
-	len = ft_strlen((char *)s);
 	if (!s)
 		return (NULL);
+	len = ft_strlen((char *)s);
 	copy = malloc (sizeof(char) * (len + 1));
 	if (!copy)
 		return (NULL);
