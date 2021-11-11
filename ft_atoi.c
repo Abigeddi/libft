@@ -6,7 +6,7 @@
 /*   By: abigeddi <abigeddi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 17:42:55 by abigeddi          #+#    #+#             */
-/*   Updated: 2021/11/10 09:46:04 by abigeddi         ###   ########.fr       */
+/*   Updated: 2021/11/11 16:27:55 by abigeddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,7 @@ int	ft_atoi(const char *str)
 	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		r = r * 10;
-		r = r + (str[i] - 48);
+		r = r * 10 + (str[i] - '0');
 		i++;
 	}
 	return (r * s);

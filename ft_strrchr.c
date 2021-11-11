@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: abigeddi <abigeddi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/01 15:13:16 by abigeddi          #+#    #+#             */
-/*   Updated: 2021/11/03 19:26:30 by abigeddi         ###   ########.fr       */
+/*   Created: 2021/11/01 15:13:16 by abigeddi m        #+#    #+#             */
+/*   Updated: 2021/11/11 19:27:04 by abigeddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,11 @@ char	*ft_strrchr(const char *s, int c)
 		return (0);
 	while (len >= 0)
 	{
-		if (s[len] == c)
+		if (s[len] == (char)c)
 			return ((char *)&s[len]);
 		len--;
 	}
-	if (c == '\0')
+	if ((char)c == '\0')
 		return ((char *)&s[len]);
 	return (0);
 }
