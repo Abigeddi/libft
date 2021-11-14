@@ -6,7 +6,7 @@
 /*   By: abigeddi <abigeddi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 12:04:33 by abigeddi          #+#    #+#             */
-/*   Updated: 2021/11/11 17:52:00 by abigeddi         ###   ########.fr       */
+/*   Updated: 2021/11/14 18:09:13 by abigeddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,9 @@ int	ft_word(const char *s, char c)
 {
 	int	i;
 	int	count;
-	int	len;
 
 	i = 0;
 	count = 0;
-	len = ft_strlen((char *)s);
 	while (s[i] == c)
 		i++;
 	while (s[i])
@@ -34,7 +32,7 @@ int	ft_word(const char *s, char c)
 		if (s[i])
 			i++;
 	}
-	if (s[len - 1] == c)
+	if (s[i - 1] == c)
 		return (count);
 	return (count + 1);
 }
