@@ -6,7 +6,7 @@
 /*   By: abigeddi <abigeddi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 08:47:49 by abigeddi          #+#    #+#             */
-/*   Updated: 2021/11/10 14:35:49 by abigeddi         ###   ########.fr       */
+/*   Updated: 2021/11/14 16:19:31 by abigeddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,11 @@ void	*ft_memset(void *b, int c, size_t len)
 
 	i = 0;
 	temp = (char *)b;
+	if (len < 0)
+		return (NULL);
 	while (i < len)
 	{
-		temp[i] = c;
+		temp[i] = (unsigned char)c;
 		i++;
 	}
 	return (b);

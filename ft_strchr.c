@@ -6,7 +6,7 @@
 /*   By: abigeddi <abigeddi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 14:43:32 by abigeddi          #+#    #+#             */
-/*   Updated: 2021/11/11 17:22:15 by abigeddi         ###   ########.fr       */
+/*   Updated: 2021/11/14 16:25:13 by abigeddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ char	*ft_strchr(const char *s, int c)
 	}
 	if ((char)c == '\0')
 		return ((char *)&s[i]);
-	return (0);
+	return (NULL);
 }
