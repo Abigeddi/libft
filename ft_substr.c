@@ -6,7 +6,7 @@
 /*   By: abigeddi <abigeddi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 19:27:35 by abigeddi          #+#    #+#             */
-/*   Updated: 2021/11/15 16:17:54 by abigeddi         ###   ########.fr       */
+/*   Updated: 2021/11/15 21:24:56 by abigeddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (!s)
 		return (NULL);
+	if (start > len)
+		return (ft_strdup(""));
 	if (ft_strlen(s + start) < len)
 		temp = malloc((ft_strlen(s + start) + 1) * sizeof(char));
 	else

@@ -45,15 +45,26 @@ BONUSSRC =	ft_lstnew.c\
 			ft_lstclear.c\
 			ft_lstiter.c\
 			ft_lstmap.c
-OBJ = $(SRC:%.c=%.o) 
+
+OBJ = $(SRC:%.c=%.o)
+
 OBJBONUS = $(BONUSSRC:%.c=%.o)
-all :$(NAME)
+
+all : $(NAME)
+
 $(NAME) : $(OBJ)
 	ar rc $(NAME) $(OBJ)
+
+%.o : %.c libft.h
+	gcc -c $(CFLAGS) $< -o $@
+
 bonus : $(OBJBONUS) $(OBJ)
 	ar rc $(NAME) $(OBJBONUS) $(OBJ)
+
 clean :
 	rm -rf $(OBJ) $(OBJBONUS)
+
 fclean : clean
 	@rm -f $(NAME)
+
 re : fclean all
