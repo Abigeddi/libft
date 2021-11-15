@@ -6,13 +6,13 @@
 /*   By: abigeddi <abigeddi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 19:26:00 by abigeddi          #+#    #+#             */
-/*   Updated: 2021/11/11 15:33:36 by abigeddi         ###   ########.fr       */
+/*   Updated: 2021/11/15 15:53:32 by abigeddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_countnumbers(int n)
+static int	ft_countnumbers(int n)
 {
 	int	c;
 
@@ -32,7 +32,7 @@ int	ft_countnumbers(int n)
 	return (c);
 }
 
-char	*ft_calcul(char *copy, long long nb, int s, int c)
+static char	*ft_calcul(char *copy, long long nb, int s, int c)
 {
 	if (nb == 0)
 		copy[0] = 48;

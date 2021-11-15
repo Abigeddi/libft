@@ -6,13 +6,13 @@
 /*   By: abigeddi <abigeddi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 12:04:33 by abigeddi          #+#    #+#             */
-/*   Updated: 2021/11/14 18:09:13 by abigeddi         ###   ########.fr       */
+/*   Updated: 2021/11/15 15:58:12 by abigeddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_word(const char *s, char c)
+static int	ft_word(const char *s, char c)
 {
 	int	i;
 	int	count;
@@ -37,7 +37,7 @@ int	ft_word(const char *s, char c)
 	return (count + 1);
 }
 
-int	ft_countword(const char *s, char c, int index)
+static int	ft_countword(const char *s, char c, int index)
 {
 	int	i;
 
@@ -52,7 +52,7 @@ int	ft_countword(const char *s, char c, int index)
 	return (i);
 }
 
-char	**ft_free(char **copy, int j)
+static char	**ft_free(char **copy, int j)
 {
 	int	i;
 
@@ -70,7 +70,7 @@ char	**ft_free(char **copy, int j)
 	return (NULL);
 }
 
-char	**ft_remplissage(char const *s, char **copy, char c)
+static char	**ft_remplissage(char const *s, char **copy, char c)
 {
 	int		i;
 	int		j;

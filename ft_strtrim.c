@@ -6,13 +6,13 @@
 /*   By: abigeddi <abigeddi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 21:42:57 by abigeddi          #+#    #+#             */
-/*   Updated: 2021/11/05 12:02:44 by abigeddi         ###   ########.fr       */
+/*   Updated: 2021/11/15 15:59:13 by abigeddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_checkleft(char *s1, char *set)
+static char	*ft_checkleft(char *s1, char *set)
 {
 	int	i;
 	int	j;
@@ -32,7 +32,7 @@ char	*ft_checkleft(char *s1, char *set)
 	return (&s1[i]);
 }
 
-char	ft_checkright(char *s1, char *set)
+static char	ft_checkright(char *s1, char *set)
 {
 	int	i;
 	int	j;

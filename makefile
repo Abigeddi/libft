@@ -50,8 +50,6 @@ OBJBONUS = $(BONUSSRC:%.c=%.o)
 all :$(NAME)
 $(NAME) : $(OBJ)
 	ar rc $(NAME) $(OBJ)
-%.o: %.c libft.h
-	$(CC) $(CFLAGS) -c $< -o $@
 bonus : $(OBJBONUS) $(OBJ)
 	ar rc $(NAME) $(OBJBONUS) $(OBJ)
 clean :
