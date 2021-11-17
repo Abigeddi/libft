@@ -6,7 +6,7 @@
 /*   By: abigeddi <abigeddi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 21:42:57 by abigeddi          #+#    #+#             */
-/*   Updated: 2021/11/15 15:59:13 by abigeddi         ###   ########.fr       */
+/*   Updated: 2021/11/17 20:28:44 by abigeddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (0);
 	left = ft_checkleft((char *)s1, (char *) set);
 	i = ft_checkright(left, (char *)set);
-	copy = malloc(sizeof(char) * (i + 1));
+	copy = (char *)malloc(sizeof(char) * (i + 1));
 	if (!copy)
 		return (0);
 	ft_memcpy(copy, left, i);

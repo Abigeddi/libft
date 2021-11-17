@@ -6,7 +6,7 @@
 /*   By: abigeddi <abigeddi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 19:26:00 by abigeddi          #+#    #+#             */
-/*   Updated: 2021/11/15 15:53:32 by abigeddi         ###   ########.fr       */
+/*   Updated: 2021/11/17 20:21:02 by abigeddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ char	*ft_itoa(int n)
 	s = 0;
 	nb = n;
 	c = ft_countnumbers(n);
-	copy = malloc(sizeof(char) * (c + 1));
+	copy = (char *)malloc(sizeof(char) * (c + 1));
 	if (!copy)
 		return (NULL);
 	if (nb < 0)

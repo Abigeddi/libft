@@ -6,7 +6,7 @@
 /*   By: abigeddi <abigeddi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 12:04:33 by abigeddi          #+#    #+#             */
-/*   Updated: 2021/11/15 19:31:15 by abigeddi         ###   ########.fr       */
+/*   Updated: 2021/11/17 20:34:01 by abigeddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,7 @@ static char	**ft_free(char **copy, int j)
 		free (copy[i]);
 		i++;
 	}
+	free (copy);
 	return (NULL);
 }
 
@@ -80,7 +81,7 @@ static char	**ft_remplissage(char const *s, char **copy, char c)
 	j = 0;
 	while (j < ft_word(s, c))
 	{
-		copy[j] = malloc(sizeof(char) * (ft_countword(s, c, i) + 1));
+		copy[j] = (char *)malloc(sizeof(char) * (ft_countword(s, c, i) + 1));
 		if (!(copy[j]))
 			return (ft_free(copy, j));
 		k = 0;
@@ -109,7 +110,7 @@ char	**ft_split(char const *s, char c)
 		copy[0] = NULL;
 		return (copy);
 	}
-	copy = malloc(sizeof(char *) * (ft_word(s, c) + 1));
+	copy = (char **)malloc(sizeof(char *) * (ft_word(s, c) + 1));
 	if (!copy)
 		return (0);
 	return (ft_remplissage(s, copy, c));
